@@ -1,0 +1,342 @@
+
+/* ========================================
+   VÉRTICE — PÁGINA DE CATEGORIAS
+======================================== */
+
+.produtosFilter {
+  --cor-texto: #22221f;
+  --cor-secundaria: #777770;
+  --cor-fundo: #f8f7f4;
+  --cor-borda: #e9e7e1;
+  --cor-destaque: #b8c5a1;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+
+  width: min(1280px, calc(100% - 64px));
+  margin: 2rem auto 5rem;
+}
+
+/* ========================================
+   CARD
+======================================== */
+
+.produtosFilter .card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  animation: cardEntrada 0.55s ease both;
+}
+
+.produtosFilter .card:hover {
+  transform: translateY(-6px);
+  border-color: #d4d4c9;
+  box-shadow: 0 18px 38px rgb(30 30 20 / 8%);
+}
+
+/* Entrada progressiva dos cards */
+
+.produtosFilter .card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.produtosFilter .card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.produtosFilter .card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.produtosFilter .card:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.produtosFilter .card:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.produtosFilter .card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+  background: var(--cor-fundo);
+
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.produtosFilter .card:hover img {
+  transform: scale(1.035);
+}
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.produtosFilter .card-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 0.85rem;
+
+  padding: 1.25rem;
+}
+
+.produtosFilter .card-conteudo h2 {
+  margin: 0;
+
+  color: var(--cor-texto);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.produtosFilter .card-conteudo p {
+  margin: 0;
+
+  color: var(--cor-secundaria);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ========================================
+   BOTÃO SAIBA MAIS
+======================================== */
+
+.produtosFilter .card-conteudo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 0.8rem 1rem;
+
+  color: #fff;
+  background: #24241f;
+  border: 1px solid #24241f;
+  border-radius: 2px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.produtosFilter .card-conteudo a:hover {
+  color: #24241f;
+  background: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+.produtosFilter .card-conteudo a:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TÍTULO E LINK DE VOLTAR
+======================================== */
+
+main > h1 {
+  width: min(1280px, calc(100% - 64px));
+  margin: 2.5rem auto 0;
+
+  color: #22221f;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -0.065em;
+  text-transform: capitalize;
+}
+
+main > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin: 2rem max(32px, calc((100% - 1280px) / 2));
+  margin-bottom: 0;
+
+  color: #777770;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+main > a:hover {
+  color: #22221f;
+  transform: translateX(-4px);
+}
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.produtosFilter + p,
+main > p {
+  width: min(1280px, calc(100% - 64px));
+  margin: 3rem auto;
+  padding: 2.5rem 1.5rem;
+
+  color: #777770;
+  background: #f8f7f4;
+  border: 1px solid #e9e7e1;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+
+@keyframes cardEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (min-width: 1500px) {
+  .produtosFilter {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .produtosFilter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+    width: calc(100% - 40px);
+  }
+
+  main > h1 {
+    width: calc(100% - 40px);
+  }
+
+  main > a {
+    margin-left: 20px;
+  }
+
+  .produtosFilter .card-conteudo {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .produtosFilter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.65rem;
+    width: calc(100% - 24px);
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .produtosFilter .card {
+    border-radius: 3px;
+  }
+
+  .produtosFilter .card img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .produtosFilter .card-conteudo {
+    gap: 0.65rem;
+    padding: 0.75rem;
+  }
+
+  .produtosFilter .card-conteudo h2 {
+    font-size: 0.9rem;
+  }
+
+  .produtosFilter .card-conteudo p {
+    font-size: 0.85rem;
+  }
+
+  .produtosFilter .card-conteudo a {
+    min-height: 40px;
+    padding: 0.65rem 0.35rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+  }
+
+  main > h1 {
+    width: calc(100% - 24px);
+    margin-top: 1.75rem;
+    font-size: 2rem;
+  }
+
+  main > a {
+    margin: 1.5rem 12px 0;
+    font-size: 0.8rem;
+  }
+
+  main > p {
+    width: calc(100% - 24px);
+  }
+}
+
+/* Respeita a preferência por movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  .produtosFilter .card {
+    animation: none;
+    transition: none;
+  }
+
+  .produtosFilter .card img,
+  .produtosFilter .card-conteudo a,
+  main > a {
+    transition: none;
+  }
+
+  .produtosFilter .card:hover,
+  .produtosFilter .card:hover img,
+  main > a:hover {
+    transform: none;
+  }
+}

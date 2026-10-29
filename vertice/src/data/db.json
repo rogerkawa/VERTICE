@@ -1,0 +1,137 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Essential",
+      "preco": 89.90,
+      "descricao": "Fone sem fio com áudio de alta qualidade, conexão estável e bateria de longa duração.",
+      "categoria": "masculino",
+      "imagem": "/images/camisetaEssential.png"
+    },
+    {
+      "id": 2,
+      "nome": "Blazer Estruturado",
+      "preco": 289.90,
+      "descricao": "Relógio inteligente com monitoramento de atividades, notificações e design moderno.",
+      "categoria": "feminino",
+      "imagem": "/images/BlazerEstruturado.png"
+    },
+    {
+      "id": 3,
+      "nome": "Jaqueta Utility",
+      "preco": 319.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "masculino",
+      "imagem": "/images/JaquetaUtility.png"
+    }
+    ,
+    {
+      "id": 4,
+      "nome": "Camisa Linho",
+      "preco": 159.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "feminino",
+      "imagem": "/images/CamisaLinho.png"
+    }
+    ,
+    {
+      "id": 5,
+      "nome": "Cordões Ouro",
+      "preco": 129.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio1.avif"
+    }
+    ,
+    {
+      "id": 6,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 7,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 8,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 9,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 10,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 11,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 12,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 13,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 14,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+    ,
+    {
+      "id": 15,
+      "nome": "Coleção Verão",
+      "preco": 459.90,
+      "descricao": "Mouse ergonômico com conexão sem fio, resposta precisa e excelente conforto.",
+      "categoria": "acessórios",
+      "imagem": "/images/acessorio2.avif"
+    }
+
+  ]
+}
