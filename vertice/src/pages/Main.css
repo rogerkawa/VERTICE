@@ -1,12 +1,8 @@
-
-/* =========================
-   HERO / PRINCIPAL
-========================= */
-
 .hero {
     display: flex;
     width: 100%;
-    min-height: min(700px, calc(100svh - 80px));
+    height: clamp(380px, 42vw, 540px);
+    min-height: 0;
 }
 
 .leftMain,
@@ -97,7 +93,7 @@
 .rightMain {
     position: relative;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 0;
 }
 
 .rightMain img {
@@ -230,9 +226,6 @@
 
 
 /* Products */
-/* =========================
-   PRODUCTS
-========================= */
 
 .headProducts {
     padding: 0 2rem;
@@ -257,9 +250,10 @@
 }
 
 .containerProducts {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
 }
 
 
@@ -267,10 +261,10 @@
 
 .filters {
     width: 100%;
-    max-width: 240px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-self: start;
 }
 
 .filterGroup {
@@ -367,14 +361,14 @@
 
 .produtos {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
+    min-width: 0;
+    margin: 0;
+    padding: 1.5rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
-    gap: 2rem 1.5rem;
+    gap: 2rem 1.25rem;
 }
 
 /* Cabeçalho */
@@ -532,16 +526,13 @@
 .btn-ver-mais {
     grid-column: 1 / -1;
     justify-self: center;
-
     display: block;
     margin: 1rem auto 2rem;
     padding: 0.85rem 1.75rem;
-
     border: 1px solid #222;
     border-radius: 3px;
     background: transparent;
     color: #1A1A17;
-
     font-size: 0.75rem;
     font-weight: bold;
     cursor: pointer;
@@ -584,7 +575,7 @@
     }
 
     .produtos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.75rem 1rem;
         padding: 1rem;
     }
@@ -739,8 +730,12 @@
 
 @media (max-width: 900px) {
     .hero {
-        min-height: 520px;
+        height: 430px;
+        min-height: 0;
     }
+    .rightMain {
+    min-height: 0;
+}
     .titleMain {
         padding: 2rem;
     }
@@ -753,19 +748,28 @@
     .cardsDestaques {
         gap: 0.8rem;
     }
+    .containerProducts {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 1rem;
+    }
 }
 
 @media (max-width: 600px) {
     .hero {
         flex-direction: column;
-        min-height: auto;
+        height: auto;
+        min-height: 0;
     }
     .leftMain,
     .rightMain {
         width: 100%;
     }
     .leftMain {
-        min-height: 370px;
+        min-height: 320px;
     }
     .titleMain {
         padding: 2rem 1.25rem;
@@ -788,7 +792,7 @@
         font-size: 0.72rem;
     }
     .rightMain {
-        height: 380px;
+        height: 300px;
         min-height: 0;
     }
     .rightMain img {
@@ -821,12 +825,26 @@
     .categoriaCard span {
         font-size: 0.9rem;
     }
+    .containerProducts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 0.75rem;
+        padding: 1rem 0;
+    }
 }
 
 
 @media (max-width: 380px) {
     .leftMain {
-        min-height: 340px;
+        min-height: 300px;
     }
     .titleMain {
         padding: 1.5rem 1rem;
@@ -835,7 +853,7 @@
         font-size: 2rem;
     }
     .rightMain {
-        height: 300px;
+        height: 250px;
     }
     .destaque {
         padding: 1.5rem 1rem;
